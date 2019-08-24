@@ -5,8 +5,6 @@ function getSongs(strURL) {
 }
 
 export function fetchSongs(strURL) {
-  console.log(strURL);
-
   return dispatch => {
     dispatch(fetchSongsBegin());
     return getSongs(strURL)

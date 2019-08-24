@@ -1,3 +1,11 @@
+<div align="center">
+  <img src="screenshots/screenshot.png" />
+</div>
+
+## JAM
+
+A demo React song player for JAM (https://www.justaddmusic.net).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

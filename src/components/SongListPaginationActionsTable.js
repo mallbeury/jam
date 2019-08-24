@@ -179,7 +179,7 @@ export default function SongListPaginationActionsTable(props) {
       </div>
     </Paper>
 
-   <ReactPlayer url={activeSongURL} playing={songPlaying} controls width={0} height={0} />
+   <ReactPlayer url={activeSongURL} playing={songPlaying} loop width={0} height={0} />
    </div>
   );
 }

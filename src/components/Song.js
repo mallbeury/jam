@@ -28,6 +28,7 @@ class Song extends React.Component {
 
   render(){
     const { classes } = this.props;
+    const pluralLikes = this.props.song.likes > 1;
 
     return (
       <TableRow>
@@ -43,7 +44,7 @@ class Song extends React.Component {
             onClick={this.handleLike}
             >
             <FavoriteIcon />
-          </IconButton> {this.props.song.likes} likes
+          </IconButton> {this.props.song.likes} like{ pluralLikes ? 's' : '' }
         </TableCell>
       </TableRow>
     )
