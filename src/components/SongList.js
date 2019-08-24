@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSongs } from '../actions/songActions';
-import CustomPaginationActionsTable from './CustomPaginationActionsTable';
+import SongListPaginationActionsTable from './SongListPaginationActionsTable';
 
 class SongList extends React.Component {
   componentDidMount() {
-    this.props.fetchSongs();
+    this.props.fetchSongs(this.props.strURL);
   }
 
   render() {
@@ -20,15 +20,15 @@ class SongList extends React.Component {
     }
 
     return (
-      <CustomPaginationActionsTable songs={songs}>
-      </CustomPaginationActionsTable>
+      <SongListPaginationActionsTable songs={songs}>
+      </SongListPaginationActionsTable>
     );
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchSongs: () => dispatch(fetchSongs())
+    fetchSongs: (strURL) => dispatch(fetchSongs(strURL))
   }
 };
 

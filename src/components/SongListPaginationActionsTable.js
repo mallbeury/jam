@@ -95,7 +95,7 @@ const useStylesTable = makeStyles(theme => ({
   }
 }));
 
-export default function CustomPaginationActionsTable(props) {
+export default function SongListPaginationActionsTable(props) {
   const classes = useStylesTable();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);

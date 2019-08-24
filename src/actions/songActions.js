@@ -1,16 +1,15 @@
-function getSongs() {
-  var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-    targetUrl = 'https://api-stg.jam-community.com/song/trending'
-
-  return fetch(proxyUrl + targetUrl)
+function getSongs(strURL) {
+  return fetch(strURL)
     .then(handleErrors)
     .then(res => res.json());
 }
 
-export function fetchSongs() {
+export function fetchSongs(strURL) {
+  console.log(strURL);
+
   return dispatch => {
     dispatch(fetchSongsBegin());
-    return getSongs()
+    return getSongs(strURL)
       .then(json => {
         dispatch(fetchSongsSuccess(json));
         return json;
